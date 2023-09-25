@@ -9,11 +9,43 @@ body {
     height: 100vh;
 }
 
-button {
+#activity{
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#get-activity {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background-color: rgb(97, 114, 119);
-    border: 1px solid rgb(74, 88, 92);
+    background-color: red;
+    border: 1px solid darkred;
     cursor: pointer;
+}
+
+
+.background-change{
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.shake {
+    margin-top: 1em;
+    color: peru;
+    animation: jump-shaking 0.63s infinite;
+}
+
+@keyframes jump-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateY(-9px) }
+  35% { transform: translateY(-9px) rotate(5deg) }
+  55% { transform: translateY(-9px) rotate(-5deg) }
+  65% { transform: translateY(-9px) rotate(5deg) }
+  75% { transform: translateY(-9px) rotate(-5deg) }
+  100% { transform: translateY(0) rotate(0) }
 }
